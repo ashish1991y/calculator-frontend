@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col">
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <h3>Simple Calculator</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="value1">Value 1</label>
+            <input type="number" class="form-control" id="value1" name="value1" [(ngModel)]="value1" aria-describedby="value1Help">
+            <small id="value1Help" class="form-text text-muted">Numeric value for operation.</small>
+          </div>
+          <div class="form-group">
+            <label for="value2">Value 2</label>
+            <input type="number" class="form-control" id="value2" name="value2" [(ngModel)]="value2" aria-describedby="value2Help">
+            <small id="value2Help" class="form-text text-muted">Numeric value for operation.</small>
+          </div>
+          <div class="form-group">
+            <label for="result">Result</label>
+            <input type="number" class="form-control" [(ngModel)]="result" name="result" id="result" readonly>
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="calculate('add')" [disabled]="isDisabled('add')">Add</button>
+          <button type="submit" class="btn btn-success" (click)="calculate('subtract')" [disabled]="isDisabled('subtract')" style="margin-left:20px">Subtract</button>
+          <button type="submit" class="btn btn-warning" (click)="calculate('multiply')" [disabled]="isDisabled('multiply')" style="margin-left:20px">Multiply</button>
+          <button type="submit" class="btn btn-danger" (click)="calculate('divide')"  [disabled]="isDisabled('divide')" style="margin-left:20px">Divide</button>
+          <button type="submit" class="btn btn-dark" (click)="reset()"  style="margin-left:20px">Reset</button>
+        </form>
+      </div>
+    </div><br/>
+
+    <div class="alert alert-danger" role="alert" *ngIf="isError">
+      <h4 class="alert-heading">{{error.name}}</h4>
+      <p>{{error.message}}</p>
+      <hr>
+    </div>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<br/>
+
+
