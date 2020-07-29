@@ -1,10 +1,10 @@
-# Calculator
+# Calculator Front-End
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 
-## Development server
+## Development server (How To Run locally)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` or `ng serve`  for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
